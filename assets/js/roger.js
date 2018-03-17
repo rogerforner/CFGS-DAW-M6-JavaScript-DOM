@@ -48,6 +48,17 @@ $(function() {
   /*
   6. saber crear atributs per a un node.
   *****************************************************************************/
+  // En el punt 5 hem creat un node <p> amb un text no justificat, per mantenir
+  // la armonia amb el primer paràgraf, crearem l'taribut class="" al nou element
+  // i li efegirem la classe de Bootstrap 4 "text-justify".
+  // Seleccionem el segon paràgraf.
+  var selP5 = document.getElementsByTagName("p")[1];
+  // Creem un atribut class="".
+  var attP5 = document.createAttribute("class");
+  // Afegim el valor "text-justify" a l'atribut creat.
+  attP5.value = "text-justify";
+  // Inserim l'atribut al paràgraf seleccionat.
+  selP5.setAttributeNode(attP5);
 
   /*
   7. saber crear taules HTML amb el DOM.
