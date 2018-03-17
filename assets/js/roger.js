@@ -99,6 +99,12 @@ function crearTaula() {
 /*
 8. clonar nodes, clonar estils de nodes, clonar taules.
 *****************************************************************************/
+function elAtaqueDelosClones() {
+  var aClonar = document.getElementById("punt8");
+  var clon = aClonar.cloneNode(true);
+  var afegirClonEn = document.getElementById("punt8contenedor");
+  afegirClonEn.appendChild(clon);
+}
 
 /*
 9. esborrar nodes.
