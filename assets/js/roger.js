@@ -100,9 +100,13 @@ function crearTaula() {
 8. clonar nodes, clonar estils de nodes, clonar taules.
 *****************************************************************************/
 function elAtaqueDelosClones() {
+  // Determinem l'element que volem clonar, identificat per id="punt8"
   var aClonar = document.getElementById("punt8");
+  // Clonem l'element escollit.
   var clon = aClonar.cloneNode(true);
+  // Seleccionem el contenidor que contindrà els clons id="punt8contenedor".
   var afegirClonEn = document.getElementById("punt8contenedor");
+  // Inserim el clon en el lloc desitjat.
   afegirClonEn.appendChild(clon);
 }
 
