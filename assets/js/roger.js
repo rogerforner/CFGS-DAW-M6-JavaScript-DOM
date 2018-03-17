@@ -29,8 +29,21 @@ $(function() {
   document.getElementById("eshared").innerHTML = " eShared és un entorn virtual on es recullen apunts dels diferents àmbits educatius per tal de facilitar l’estudi dels/les estudiants i proporcionar una guia, o millor dit, una eina, sempre actualitzada, per als/les professionals d’un sector educatiu que es renova de forma constant"
 
   /*
-  5. saber crear nous elements al DOM (<p>, <img>, etc.)
+  5. saber crear nous elements al DOM (<p>, <img>, etc.) = crear un node
   *****************************************************************************/
+  // Els nostres paràgrafs estan en un <div id="punt5", en el qual hi afegirem el
+  // text següent.
+  // Primer creem un element <p>
+  var p5 = document.createElement("p");
+  // Desprès creem un contingut de tipus text per al nostre <p> creat anteriorment.
+  var node5 = document.createTextNode("Això és una activitat del CFGS de DAW, Institut Montsià (Amposta, Terres de l'Ebre).");
+  // Un cop creats els elements els unifiquem, afegint node5 dintre de p5.
+  p5.appendChild(node5);
+  // Ara que tenim l'element preparat l'hem d'afegir el lloc escollit.
+  // Agafaem el div que l'ha de contindre.
+  var afegirEn = document.getElementById("punt5");
+  // Inserim el nostre nou element en el div.
+  afegirEn.appendChild(p5);
 
   /*
   6. saber crear atributs per a un node.
