@@ -10,6 +10,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Estils -->
     <link rel="stylesheet" href="assets/css/master.css">
@@ -38,8 +39,29 @@
             <img src="assets/img/puntcat.png" class="img-fluid" alt="Webs al punt .cat">
           </div>
           <div class="col-md-6">
-            <p class="text-justify"><a href="http://websalpunt.cat/">Webs al punt .cat</a> és un concurs que té l'objectiu de promoure el coneixement de competències digitals en la comunitat escolar a través de la creació de llocs web i apps. WAP.cat està destinat a alumnes de Primària, ESO, Batxillerat i Graus Formatius. El concurs també vol estimular la creació de continguts digitals en català.</p>
+            <p id="text"class="text-justify"><a href="http://websalpunt.cat/">Webs al punt .cat</a> és un concurs que té l'objectiu de promoure el coneixement de competències digitals en la comunitat escolar a través de la creació de llocs web i apps. WAP.cat està destinat a alumnes de Primària, ESO, Batxillerat i Graus Formatius. El concurs també vol estimular la creació de continguts digitals en català.</p>
           </div>
+          <div class="col-md-6 offset-6">
+            <input class="star star-5 " value="5" id="star-5" type="radio" name="star" />
+            <label class="star star-5" for="star-5"></label>
+            <input class="star star-4 " value="4" id="star-4" type="radio" name="star" />
+            <label class="star star-4" for="star-4"></label>
+            <input class="star star-3 " value="3" id="star-3" type="radio" name="star" />
+            <label class="star star-3" for="star-3"></label>
+            <input class="star star-2 " value="2" id="star-2" type="radio" name="star" />
+            <label class="star star-2" for="star-2"></label>
+            <input class="star star-1 " value="1" id="star-1" type="radio" name="star" />
+            <label class="star star-1" for="star-1"></label>
+            <br>
+            <button type="button" name="button" onclick="killStar();">ggdsgsd</button>
+            <button type="button" name="button" onclick="killText();">ttttt</button>
+            <button type="button" name="button" onclick="noStar();">Nostar</button>
+
+
+          </div><!-- /.col -->
+        </div>
+        <div class="row">
+
         </div>
       </div>
     </main>
@@ -55,5 +77,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- JavaScript pràctica -->
     <script src="assets/js/enric.js" charset="utf-8"></script>
+
   </body>
 </html>
