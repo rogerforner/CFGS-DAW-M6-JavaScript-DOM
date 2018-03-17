@@ -103,6 +103,16 @@ function crearTaula() {
 /*
 9. esborrar nodes.
 *****************************************************************************/
+function borrarTaules() {
+  // Seleccionar el segon paràgraf perquè conté les taules.
+  var conteTaules = document.getElementsByTagName("p")[1];
+  // Seleccionem la primera taula, recordant que getElementsByTagName() retorna
+  // un array.
+  var taules = document.getElementsByTagName("table")[0];
+  // Esborrem les taules de dintre del primer paràgraf.
+  // Resulta que no només s'esborra la primera, es fa un esborrat recursiu.
+  conteTaules.removeChild(taules);
+}
 
 /*
 10. saber afegir i eliminar EventListener.
