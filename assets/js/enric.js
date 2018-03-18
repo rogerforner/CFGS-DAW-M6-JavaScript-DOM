@@ -232,29 +232,29 @@ function crearTaula() {
   // Creem un element <table>
   var table = document.createElement("table");
   // Afegir l'atribut id="unaTaula" a l'element <table> creat.
-  table.setAttribute("id", "unaTaula");
+  table.setAttribute("id", "Taula");
   // Seleccionem el segon paràgraf.
-  var afegirTaulaEn = document.getElementById("text1");
+  var afegirATaula = document.getElementById("text");
   // Afegim l'element <table> al segon paràgraf.
-  afegirTaulaEn.appendChild(table);
+  afegirATaula.appendChild(table);
 
   // Creem un element <tr>
   var tr = document.createElement("tr");
   // Afegim l'atribut id="tr1" a l'element <tr>
   tr.setAttribute("id", "tr1");
   // Insertem l'element <tr> dintre de <table>
-  document.getElementById("unaTaula").appendChild(tr);
+  document.getElementById("Taula").appendChild(tr);
 
   // Creem un element <td>
   var td = document.createElement("td");
   // Creem un text.
-  var text = document.createTextNode("I això és una cel·la dintre d'una taula.");
+  var text = document.createTextNode("Hi soc un sujeto");
   // Inserim el text a l'element <td>.
   td.appendChild(text);
   // Seleccionem l'elemnt <tr> creat en id = tr1 i l'inserim en el <td>
   document.getElementById("tr1").appendChild(td);
 
-  // Apliquem un atribut class="" (mirar punt 6)
+
   var selTaula = document.getElementsByTagName("table")[0];
   var attTaula = document.createAttribute("class");
   attTaula.value = "table mt-2";
@@ -263,11 +263,25 @@ function crearTaula() {
 /*
 8. clonar nodes, clonar estils de nodes, clonar taules.
 *****************************************************************************/
+function Clon() {
 
+  var text = document.getElementById("text");
+  // Clonem l'element escollit.
+  var clon = text.cloneNode(true);
+  // Seleccionem el contenidor que contindrà els clons id="punt8contenedor".
+  var clonarA = document.getElementById("text1");
+  // Inserim el clon en el lloc desitjat.
+  clonarA.appendChild(clon);
+}
 /*
 9. esborrar nodes.
 *****************************************************************************/
+function borrarTaules() {
+  var contenedor = document.getElementById("text");
+  var taules = document.getElementsByTagName("table")[0];
+  contenedor.removeChild(taules);
 
+}
 /*
 10. saber afegir i eliminar EventListener.
 *****************************************************************************/
