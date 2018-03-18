@@ -15,9 +15,15 @@
     <link rel="stylesheet" href="assets/css/master.css">
 
     <title>eShared</title>
+
+    <style>
+      body { background-image: url(https://source.unsplash.com/3ChXTytXDUI); }
+      body.fondo2 { background-image: url(https://source.unsplash.com/-KKLWDAgj2Q); }
+      .row { background-color: white; }
+    </style>
   </head>
   <body>
-    <nav class="container p-3 bg-dark text-white">
+    <nav onclick="eliminarEvent()" class="container p-3 bg-dark text-white">
       <ul class="nav">
         <li class="nav-item">
           <a class="nav-link text-white" href="index.html">Qui som?</a>
@@ -26,7 +32,7 @@
           <a class="nav-link text-white" href="wap.html">Webs al punt .cat</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="git.html">GitHub</a>
+          <a id="adria" class="nav-link text-white" href="git.html">GitHub</a>
         </li>
       </ul>
     </nav>
@@ -37,14 +43,16 @@
           <div class="col-md-6">
             <img src="https://source.unsplash.com/YbI04xIh_48" class="img-fluid" alt="From Unsplash, by @florianklauer">
           </div>
-          <div class="col-md-6">
+          <div id="clons" class="col-md-6">
             <p class="text-justify">Per tal d’afavorir l'objectiu del concurs, el qual pretén extendre la filosofia de promoure el coneixement de competències digitals, hem afegit el nostre projecte, eShared, al <a href="https://github.com/rogerforner/WebsAlPunt_eShared"><i class="fab fa-github"></i> GitHub</a>, lloc a través del qual es podrà accedir al codi del projecte, a comentaris (commits) dels diversos canvis fets per poder-ne fer un seguiment de com s’ha fet tot i, a més a més, descarregar-lo per ser emprat de forma lliure.</p>
+            <p id="borrar" onclick="clonarNodes()"></p>
+            <div id="taula"></div>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="container p-3 bg-dark text-white">
+    <footer onclick="borrarNodes()" class="container p-3 bg-dark text-white">
       CreativeCommons <i class="fab fa-creative-commons"></i> 2018 eShared. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>.
     </footer>
 
