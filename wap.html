@@ -39,28 +39,35 @@
             <img src="assets/img/puntcat.png" class="img-fluid" alt="Webs al punt .cat">
           </div>
           <div class="col-md-6">
+            <p hidden id="bit"><i class='fab fa-btc'></i></p>
             <p id="text"class="text-justify"><a href="http://websalpunt.cat/">Webs al punt .cat</a> és un concurs que té l'objectiu de promoure el coneixement de competències digitals en la comunitat escolar a través de la creació de llocs web i apps. WAP.cat està destinat a alumnes de Primària, ESO, Batxillerat i Graus Formatius. El concurs també vol estimular la creació de continguts digitals en català.</p>
           </div>
           <div class="col-md-6 offset-6">
-            <input class="star star-5 " value="5" id="star-5" type="radio" name="star" />
+            <input class="star star-5 "onclick="attr();" value="5" id="star-5" type="radio" name="star" />
             <label class="star star-5" for="star-5"></label>
-            <input class="star star-4 " value="4" id="star-4" type="radio" name="star" />
+            <input class="star star-4 "onclick="attr();" value="4" id="star-4" type="radio" name="star" />
             <label class="star star-4" for="star-4"></label>
-            <input class="star star-3 " value="3" id="star-3" type="radio" name="star" />
+            <input class="star star-3 " onclick="attr();"value="3" id="star-3" type="radio" name="star" />
             <label class="star star-3" for="star-3"></label>
-            <input class="star star-2 " value="2" id="star-2" type="radio" name="star" />
+            <input class="star star-2 "onclick="attr();" value="2" id="star-2" type="radio" name="star" />
             <label class="star star-2" for="star-2"></label>
-            <input class="star star-1 " value="1" id="star-1" type="radio" name="star" />
+            <input class="star star-1 " onclick="attr();"value="1" id="star-1" type="radio" name="star" />
             <label class="star star-1" for="star-1"></label>
             <br>
             <button type="button" name="button" onclick="killStar();">ggdsgsd</button>
-            <button type="button" name="button" onclick="killText();">ttttt</button>
+            <button type="button" name="button" onclick="killText();">hi</button>
             <button type="button" name="button" onclick="noStar();">Nostar</button>
+            <button type="button" name="button" onclick="addTextNode();">NEW IMG</button>
+            <button type="button" name="button" onclick="tallarText();">tallar</button>
+            <button type="button" name="button" onclick="crearTaula();">taula</button>
+            <button type="button" name="button" >punts</button>
+
+
 
 
           </div><!-- /.col -->
         </div>
-        <div class="row">
+        <div class="row" id="text1">
 
         </div>
       </div>

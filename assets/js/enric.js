@@ -164,7 +164,7 @@
 1. ús del document.getElementById()
 *****************************************************************************/
 function killText() {
-    document.getElementById('text').style.visibility = "hidden";
+    document.getElementById('text').remove();
 }
 /*
 2.ús del document.getElementsByTagName()
@@ -176,35 +176,90 @@ function killStar() {
       x[i].style.visibility = "hidden";
       u[i].style.visibility = "hidden";
     }
-
 }
 /*
 3. saber accedir a atributs HTML del DOM.
 *****************************************************************************/
+function attr() {
+  var punts = document.getElementsByName("star");
 
+  for (var i = 0; i < punts.length; i++) {
+    if (punts[i].checked==true) {
+      alert("La puntuació es "+punts[i].value);
+    }else {
+
+    }
+
+  }
+
+}
 /*
 4. saber usar la propietat innerHTML.
 *****************************************************************************/
 function noStar(){
   var x= document.getElementsByTagName("LABEL");
   var u=document.getElementsByTagName("INPUT");
+  var bit = document.getElementById('bit').innerHTML;
 
   for (var i = 0; i < x.length; i++) {
-    x[i].innerHTML="<i class='fab fa-btc'></i>";
+    x[i].innerHTML=bit;
   }
 }
 /*
 5. saber crear nous elements al DOM (<p>, <img>, etc.)
-*****************************************************************************/
-
+*****************************************************************************/ https://source.unsplash.com/featured/?shop
+function addTextNode(){
+var img = document.createElement("img");
+img.src="https://source.unsplash.com/featured"
+var afegir = document.getElementById("text1");
+afegir.appendChild(img);
+}
 /*
 6. saber crear atributs per a un node.
 *****************************************************************************/
-
+function tallarText(){
+var afegir1 = document.getElementById("text");
+var att = document.createAttribute("class");
+// Afegim el valor "text-justify" a l'atribut creat.
+att.value = "text-truncate";
+// Inserim l'atribut al paràgraf seleccionat.
+afegir1.setAttributeNode(att);
+}
 /*
 7. saber crear taules HTML amb el DOM.
 *****************************************************************************/
+function crearTaula() {
+  // Creem un element <table>
+  var table = document.createElement("table");
+  // Afegir l'atribut id="unaTaula" a l'element <table> creat.
+  table.setAttribute("id", "unaTaula");
+  // Seleccionem el segon paràgraf.
+  var afegirTaulaEn = document.getElementById("text1");
+  // Afegim l'element <table> al segon paràgraf.
+  afegirTaulaEn.appendChild(table);
 
+  // Creem un element <tr>
+  var tr = document.createElement("tr");
+  // Afegim l'atribut id="tr1" a l'element <tr>
+  tr.setAttribute("id", "tr1");
+  // Insertem l'element <tr> dintre de <table>
+  document.getElementById("unaTaula").appendChild(tr);
+
+  // Creem un element <td>
+  var td = document.createElement("td");
+  // Creem un text.
+  var text = document.createTextNode("I això és una cel·la dintre d'una taula.");
+  // Inserim el text a l'element <td>.
+  td.appendChild(text);
+  // Seleccionem l'elemnt <tr> creat en id = tr1 i l'inserim en el <td>
+  document.getElementById("tr1").appendChild(td);
+
+  // Apliquem un atribut class="" (mirar punt 6)
+  var selTaula = document.getElementsByTagName("table")[0];
+  var attTaula = document.createAttribute("class");
+  attTaula.value = "table mt-2";
+  selTaula.setAttributeNode(attTaula);
+}
 /*
 8. clonar nodes, clonar estils de nodes, clonar taules.
 *****************************************************************************/
